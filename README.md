@@ -1,2 +1,3 @@
-# core3beam5spirit-automation-tool
-A automation-tool project by lunarpeak77
+# Automation Tool Project
+
+An automation tool for web scraping and desktop automation.
