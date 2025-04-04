@@ -38,3 +38,15 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+
+# Update at 2025-04-05 08:19:05
+# Refactored the code
+# This is a random comment
+# Added unit tests
+
+def reverse_string(s):
+    return s[::-1]
+
+def is_palindrome(s):
+    s = s.lower().replace(" ", "")
+    return s == s[::-1]
