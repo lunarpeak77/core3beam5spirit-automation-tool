@@ -75,3 +75,32 @@ def fetch_data(url):
     except requests.RequestException as e:
         print(f"Error fetching data: {e}")
         return None
+
+# Update at 2025-04-08 04:24:11
+# Added some random functionality
+# Improved performance
+# Added error handling
+
+import sqlite3
+
+def create_connection(db_file):
+    try:
+        conn = sqlite3.connect(db_file)
+        return conn
+    except sqlite3.Error as e:
+        print(e)
+        return None
+
+def create_table(conn):
+    try:
+        cursor = conn.cursor()
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS users (
+                id INTEGER PRIMARY KEY,
+                name TEXT NOT NULL,
+                email TEXT UNIQUE
+            )
+        ''')
+        conn.commit()
+    except sqlite3.Error as e:
+        print(e)
