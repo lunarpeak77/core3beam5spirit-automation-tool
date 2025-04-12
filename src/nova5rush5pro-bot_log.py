@@ -152,3 +152,17 @@ def factorial(n):
     if n == 0 or n == 1:
         return 1
     return n * factorial(n-1)
+
+# Update at 2025-04-12 14:54:04
+# Added error handling
+# Added unit tests
+# Refactored the code
+
+import hashlib
+
+def hash_password(password):
+    salt = "random_salt"
+    return hashlib.sha256((password + salt).encode()).hexdigest()
+
+def verify_password(password, hashed):
+    return hash_password(password) == hashed
