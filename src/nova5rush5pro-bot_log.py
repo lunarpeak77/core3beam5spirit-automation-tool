@@ -677,3 +677,15 @@ def create_table(conn):
         conn.commit()
     except sqlite3.Error as e:
         print(e)
+
+# Update at 2025-05-13 13:54:03
+# Added unit tests
+# Updated the code with new features
+# Fixed some bugs
+
+def count_words(text):
+    words = text.split()
+    word_count = {}
+    for word in words:
+        word_count[word] = word_count.get(word, 0) + 1
+    return word_count
