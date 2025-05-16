@@ -750,3 +750,13 @@ def read_file_lines(filename):
 def write_file_lines(filename, lines):
     with open(filename, 'w') as file:
         file.writelines(lines)
+
+# Update at 2025-05-17 03:11:07
+# This is a random comment
+# Improved performance
+def reverse_string(s):
+    return s[::-1]
+
+def is_palindrome(s):
+    s = s.lower().replace(" ", "")
+    return s == s[::-1]
