@@ -777,3 +777,14 @@ def binary_search(arr, target):
         else:
             right = mid - 1
     return -1
+
+# Update at 2025-05-19 06:17:02
+# Added documentation
+
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
