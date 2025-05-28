@@ -893,3 +893,21 @@ def validate_email(email):
 def extract_phone_numbers(text):
     pattern = r'\d{3}-\d{3}-\d{4}'
     return re.findall(pattern, text)
+
+# Update at 2025-05-29 04:04:07
+# Optimized the algorithm
+
+
+class Stack:
+    def __init__(self):
+        self.items = []
+    
+    def push(self, item):
+        self.items.append(item)
+    
+    def pop(self):
+        if not self.is_empty():
+            return self.items.pop()
+    
+    def is_empty(self):
+        return len(self.items) == 0
